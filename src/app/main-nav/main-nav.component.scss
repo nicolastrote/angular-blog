@@ -1,0 +1,36 @@
+@import "../../variables";
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: $menu-color;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 3px 0 8px rgba(0,0,0,0.6);
+}
+
+.mat-toolbar a {
+  display: inline-block;
+  margin: 0 10px;
+  color: $text-color;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.mat-nav-list-header {
+  display: flex;
+  flex: 1 1 auto;
+}

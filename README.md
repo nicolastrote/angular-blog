@@ -161,5 +161,5 @@ import 'hammerjs';
 
 ### Main-nav
 ```
-$ ng generate @angular/material:material-nav --name=main-nav
+$ ng generate @angular/material:material-nav --name=main-nav --module app
 ```
