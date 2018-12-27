@@ -92,6 +92,7 @@ source: https://material.angular.io/guide/getting-started
 ### Install Material
 ```
 npm install --save @angular/material @angular/cdk
+npm install --save @angular/animations
 ```
 
 ### Manage Material Component In App.module.ts File
@@ -106,6 +107,7 @@ imports: [
 ```
 
 ### Create Material.module.ts : 
+* create a file named material.module.ts
 ```
 import { NgModule } from '@angular/core';
 
@@ -156,8 +158,6 @@ import 'hammerjs';
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
  ```
-### Create New Module Component And Add It Automaticaly In App.module
-``` ng g c auth/signup --module app.module ````
 
 ### Main-nav
 ```
