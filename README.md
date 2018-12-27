@@ -1,27 +1,165 @@
-# AngularBlog
-
+# Angular Fitness App
+Best practises for an Angular Fitness App with Node.js, MaterialUI, NgRx, Angularfire, Firebase.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Important Links
+ * http://material.angular.io
+ * http://karma-runner.github.io
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Preleminary: Homebrew Installation
+Brew is a package manager for OSX
+```
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew -v
+```
+or if you have already brew installed
+```$ brew update```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Git
+Install from https://git-scm.com/ or 
+```
+$ brew install git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+Make your setup on:
+```
+$ git config --global color.ui true
 
-## Running end-to-end tests
+$ git config --global user.name "JeanTruchet"
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+$ git config --global user.email "jean.truchet@r3d.com"
+```
+Ssh keys creation :
+```
+$ ssh-keygen -t rsa -C "jean.truchet@r3d.com"
+```
 
-## Further help
+## Node.js
+```
+$ brew install nodejs
+$ node -v
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Visual Code
+ * install Visual Code from : https://code.visualstudio.com/
+
+### Plugins To Install:
+  * TSLint
+  * Auto close Tag
+  * Prettier ou Beautify
+  * ESLint
+  * Angular 7 Snippets (why not!)
+
+
+## Workspace
+ * Create a Workspace forlder:
+```
+$ md ~/Worspace/
+$ cd ~/Workspace
+```
+
+## Angular 6 And Blog Project Creation
+```
+$ npm install -g @angular/cli
+$ ng new angular-blog
+// chose "no rooter" and "with scss"
+```
+Customize your application :
+  * change title in the index.html file
+  * change the default angular favicon.ico
+  * Make a README.md file
+  * Make a LICENSE file
+
+
+## SetUp your GitHub Repository
+  * Make an empty repository "angular-blog" on GitHub
+Localy on your terminal:
+  * cd ~/Workspace/angular-blog
+  * git init
+  * git add README.md
+  * git commit -m "first commit"
+  * git remote add origin https://github.com/nicolastrote/angular-blog.git
+  * git push -u origin master
+
+
+## Angular Material
+source: https://material.angular.io/guide/getting-started
+
+### Install Material
+```
+npm install --save @angular/material @angular/cdk
+```
+
+### Manage Material Component In App.module.ts File
+Import in app.module.ts
+```
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+...
+imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+  ],
+```
+
+### Create Material.module.ts : 
+```
+import { NgModule } from '@angular/core';
+
+@NgModule({
+  imports: [],
+  exports: [],
+})
+export class MaterialModule {}
+```
+and import it in app.module.ts
+```
+import { MaterialModule } from './material.module';
+...
+@NgModule({
+...
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    ]
+```
+
+### Material Theme
+ Include a theme in style.scss file:
+
+```
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+```
+ * Error on "~@angular/.."
+ * All themes are in node_modules/@angular/material/prebuilt-themes
+
+### Gesture Support
+ * install hammerjs
+```
+npm install --save hammerjs
+```
+ * inside the main.ts file:
+```
+import 'hammerjs';
+```
+
+### Add Material Icons
+ * Add the icon font in your index.html:
+ ```
+  <head>
+    ...
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+ ```
+### Create New Module Component And Add It Automaticaly In App.module
+``` ng g c auth/signup --module app.module ````
+
+### Main-nav
+```
+$ ng generate @angular/material:material-nav --name=main-nav
+```
