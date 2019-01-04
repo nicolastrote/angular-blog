@@ -1,9 +1,5 @@
-
-// Typography
-$base-font-family: "Roboto", Arial, sans-serif;
-
 // Text Color
-$text-color: #484848;
+$text-color: rgba(0, 0, 0, 0.87);
 
 // Menu color
 $menu-color: #E2E1DC;
@@ -13,3 +9,38 @@ $mobile-lg-width: 600px;
 
 // Shadow
 $shadow-box: 0 2px 12px 0 rgba(95, 113, 126, 0.19);
+
+// Fonts
+h1 {
+  font-family: 'Lato';
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 110%;
+  margin: 2.1rem 0 1.68rem 0;
+  text-size-adjust: 100%;
+
+  @media only screen and (min-width: 600px) {
+    font-size: 56px;
+  }
+}
+
+p {
+  font-family: 'Lato';
+  font-size: 12px;
+  font-weight: 100;
+  margin: 0;
+  @media only screen and (min-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+strong {
+  margin-bottom: 2px;
+  font-family: 'Lato';
+  font-size: 15px;
+  font-weight: 600;
+
+  @media only screen and (min-width: 600px) {
+    font-size: 14px;
+  }
+}

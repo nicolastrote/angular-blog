@@ -163,3 +163,20 @@ import 'hammerjs';
 ```
 $ ng generate @angular/material:material-nav --name=main-nav --module app
 ```
+
+### Roboto Font
+read source : https://material.angular.io/guide/typography
+
+### Home and Footer Component
+```
+ng g c home --module app
+ng g c footer --module app
+```
+plus add home and footer in app.component.html
+```
+```
+
+### Kill All Angular server on Mac 
+```
+sudo lsof -t -i tcp:4200 | xargs kill -9
+```
