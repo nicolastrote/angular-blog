@@ -11,11 +11,36 @@
   a {
     color: lightgrey;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .mat-icon {
     vertical-align: middle;
-    margin: 2px 5px;
-}
-  
+    margin: 2px 5px 2px 0px;
+  }
+
+  .follow-me {
+    margin-top: 20px;
+    padding: 10px;
+    clear: left;
+    text-align: center;
+    font-size: 10px;
+    font-family: arial;
+
+    .heart {
+      color: red;
+    }
+
+    .sign {
+      color: #4C8AFC;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

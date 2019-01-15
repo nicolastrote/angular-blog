@@ -5,7 +5,8 @@ $text-color: rgba(0, 0, 0, 0.87);
 $menu-color: #E2E1DC;
 
 // Media size
-$mobile-lg-width: 600px;
+$mobile-max-width: 599px;
+$tablet-max-width:960px;
 
 // Shadow
 $shadow-box: 0 2px 12px 0 rgba(95, 113, 126, 0.19);
@@ -19,7 +20,7 @@ h1 {
   margin: 2.1rem 0 1.68rem 0;
   text-size-adjust: 100%;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: $mobile-max-width) {
     font-size: 56px;
   }
 }
@@ -29,7 +30,7 @@ p {
   font-size: 12px;
   font-weight: 100;
   margin: 0;
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: $mobile-max-width) {
     font-size: 14px;
   }
 }
@@ -40,7 +41,7 @@ strong {
   font-size: 15px;
   font-weight: 600;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: $mobile-max-width) {
     font-size: 14px;
   }
 }

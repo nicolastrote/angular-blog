@@ -9,13 +9,22 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { Page2Component } from './page2/page2.component';
+import { Page3Component } from './page3/page3.component';
+import { Page41Component } from './page41/page41.component';
+import { Page42Component } from './page42/page42.component';
+import { appRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    Page2Component,
+    Page3Component,
+    Page41Component,
+    Page42Component
   ],
   imports: [
     BrowserModule,
@@ -27,6 +36,7 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    appRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

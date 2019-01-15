@@ -39,7 +39,7 @@
   color: #fff;
   width: 100%;
 
-  @media only screen and (min-width: 601px) {
+  @media only screen and (min-width: $mobile-max-width) {
     line-height: 64px;
   }
 }
@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: row;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: $mobile-max-width) {
     justify-content: space-between;
   }
 }
@@ -111,7 +111,7 @@
   width: 90%;
   margin: 0 auto;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: $mobile-max-width) {
     width: 70%;
   }
 }

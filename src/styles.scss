@@ -11,7 +11,7 @@ html, body {
   font-weight: normal;
   color: $text-color;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: $mobile-max-width) {
     font-size: 15px;
   }
 }
