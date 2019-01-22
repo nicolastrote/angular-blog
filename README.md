@@ -150,6 +150,22 @@ npm install --save hammerjs
 import 'hammerjs';
 ```
 
+###  Flex-Layout
+Installation :
+```
+npm install @angular/flex-layout @angular/cdk --save
+```
+src/app/app.module.ts
+```
+import {NgModule} from '@angular/core';
+import {FlexLayoutModule} from '@angular/flex-layout';
+// other imports 
+@NgModule({
+  imports: [FlexLayoutModule],
+  ...
+})
+```
+
 ### Add Material Icons
  * Add the icon font in your index.html:
  ```
@@ -181,3 +197,53 @@ plus add home and footer in app.component.html
 ```
 sudo lsof -t -i tcp:4200 | xargs kill -9
 ```
+
+## More Icons
+source: https://www.npmjs.com/package/@mdi/angular-material
+ * Download the mdi.svg file and place it in /assets/
+ * Install the @mdi/angular-material npm package
+```
+npm install @mdi/angular-material
+```
+ * write in material.module.ts
+```
+import { MatIconModule, MatIconRegistry,...} from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  imports: [ 
+    ...
+    // Required by the Angular Material icon module
+    MatIconModule,
+    HttpClientModule,
+  ],
+  exports: [ 
+    ...
+    MatIconModule,
+  ],
+})
+export class MaterialModule {
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg'));
+  }
+}
+```
+ * In angular.json
+ ```
+{
+   // ...
+   "architect": {
+     "build": {
+       "options": {
+         "assets": [
+           { "glob": "**/*", "input": "./assets/", "output": "./assets/" },
+           { "glob": "favicon.ico", "input": "./", "output": "./" },
+           { "glob": "mdi.svg", "input": "../node_modules/@mdi/angular-material", "output": "./assets" }
+         ]
+       }
+     }
+   }
+   // ...
+}
+ ```

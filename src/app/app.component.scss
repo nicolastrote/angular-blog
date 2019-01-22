@@ -1,11 +1,24 @@
 @import "../variables";
 
-.nav-extended {
-  margin: 0;
-  padding-right: auto;  
+mat-sidenav {
+  height: 100%; 
 }
 
-.footer {
-  color: $text-color;
-  height: 50px;
+mat-sidenav-content {
+  height: 100%;
+}
+
+mat-sidenav-container {
+  height: calc(100% - 55px); // less fixed footer hight
+
+  @media only screen and (min-width: $mobile-max-width) {
+    height: calc(100% - 65px);
+  }
+}
+
+mat-toolbar {
+  font-size: 18px;
+  line-height: 1;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
 }

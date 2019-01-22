@@ -1,4 +1,31 @@
 .mat-typography {
-    margin: 20px;
-    height: 400px;
+  margin: 20px;
+  height: 400px;
+}
+
+.cards {
+  margin: 20px;
+}
+
+mat-card {
+  // margin: 20px auto;
+  max-width: 400px,
+}
+
+.home-title {
+  text-align: center;
+}
+
+.home-staff {
+  text-align: center;
+}
+
+.card-home-staff {
+  margin: 20px;
+
+  img {
+      margin: 15px;
+      width: 90px;
+      height: 90px;
+  }
 }

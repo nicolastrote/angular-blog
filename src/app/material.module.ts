@@ -1,9 +1,34 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material';
+import { MatMenuModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatIconRegistry, MatListModule, 
+  MatCardModule} from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+ 
 
 @NgModule({
-  imports: [ MatButtonModule, MatMenuModule],
-  exports: [ MatButtonModule, MatMenuModule],
+  imports: [ 
+    MatButtonModule, 
+    MatMenuModule, 
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    // Required by the Angular Material icon module
+    MatIconModule,
+    HttpClientModule,
+  ],
+  exports: [ 
+    MatButtonModule, 
+    MatMenuModule, 
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+  ],
 })
-export class MaterialModule {}
+export class MaterialModule {
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')); // Or whatever path you placed mdi.svg at
+  }
+}

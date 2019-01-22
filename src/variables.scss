@@ -25,23 +25,23 @@ h1 {
   }
 }
 
-p {
-  font-family: 'Lato';
-  font-size: 12px;
-  font-weight: 100;
-  margin: 0;
-  @media only screen and (min-width: $mobile-max-width) {
-    font-size: 14px;
-  }
-}
+// p {
+//   font-family: 'Lato';
+//   font-size: 12px;
+//   font-weight: 100;
+//   margin: 0;
+//   @media only screen and (min-width: $mobile-max-width) {
+//     font-size: 14px;
+//   }
+// }
 
-strong {
-  margin-bottom: 2px;
-  font-family: 'Lato';
-  font-size: 15px;
-  font-weight: 600;
+// strong {
+//   margin-bottom: 2px;
+//   font-family: 'Lato';
+//   font-size: 15px;
+//   font-weight: 600;
 
-  @media only screen and (min-width: $mobile-max-width) {
-    font-size: 14px;
-  }
-}
+//   @media only screen and (min-width: $mobile-max-width) {
+//     font-size: 14px;
+//   }
+// }
