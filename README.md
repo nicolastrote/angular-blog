@@ -2,7 +2,7 @@
 Best practises for an Angular Fitness App with Node.js, MaterialUI, NgRx, Angularfire, Firebase.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
-![alt text](https://github.com/nicolastrote/angular-blog/blob/master/src/app/img/first-view.png)
+![alt text](https://github.com/nicolastrote/angular-blog/blob/master/src/assets/img/first-view.png)
 
 
 ## Important Links
