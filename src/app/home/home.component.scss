@@ -13,6 +13,8 @@ mat-card {
 }
 
 .home-title {
+  padding-top: 50px;
+  height: 260px;
   text-align: center;
 }
 
@@ -21,11 +23,45 @@ mat-card {
 }
 
 .card-home-staff {
-  margin: 20px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: none;
+
+  mat-card-title {
+    position: relative;
+    text-transform: uppercase;
+
+    &:before {
+      position: absolute;
+      z-index: 1;
+      bottom: -4px;
+      left: 12.5%;
+      width: 75%;
+      height: 2px;
+      margin: auto;
+      background: #e96656;
+      content: "";
+    }
+  }
+
+  mat-card-content {
+    font-size: 13px;
+  }
 
   img {
-      margin: 15px;
-      width: 90px;
-      height: 90px;
+    margin: 15px;
+    width: 174px;
+    height: 174px;
+  }
+}
+
+.mat-icon-list {
+  mat-icon {
+    transition: all 700ms;
+    color: #808080;
+
+    &:hover {
+      color: #e96656;
+    }
   }
 }
